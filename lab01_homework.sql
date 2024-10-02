@@ -177,6 +177,9 @@ SELECT
     (SELECT TenKyNang FROM KyNang WHERE MaKyNang = C.MaKyNang) AS TenKyNang, 
     C.CapDo 
 FROM ChuyenGia_KyNang C;
+// SELECT TenKyNang, CapDo
+    FROM ChuyenGia_KyNang, KyNang
+    WHERE ChuyenGia_KyNang.MaKyNang = KyNang.MaKyNang;
 
 SELECT MaChuyenGia, VaiTro 
 FROM ChuyenGia_DuAn;
