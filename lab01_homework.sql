@@ -204,6 +204,7 @@ FROM ChuyenGia
 ORDER BY MaChuyenGia 
 OFFSET 0 ROWS 
 FETCH NEXT 5 ROWS ONLY;
+// SELECT TOP 5 HoTen, Email FROM ChuyenGia;
 
 SELECT TenCongTy 
 FROM CongTy 
