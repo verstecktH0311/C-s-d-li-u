@@ -202,7 +202,12 @@ WHERE YEAR(NgayKetThuc) = 2023;
 -- Liệt kê tên và email của các chuyên gia có tên bắt đầu bằng chữ 'N'.
 SELECT HoTen, Email
 FROM ChuyenGia
-WHERE HoTen LIKE N'N%';
+WHERE SUBSTRING(HoTen, 1, 1) = 'N';
+
+--
+SELECT HoTen, Email
+FROM ChuyenGia
+WHERE LEFT(HoTen, 1) = 'N';
 
 -- Hiển thị tên kỹ năng và loại kỹ năng, không bao gồm các kỹ năng thuộc loại 'Ngôn ngữ lập trình'.
 SELECT TenKyNang, LoaiKyNang
