@@ -67,11 +67,7 @@ BEGIN
 		ROLLBACK TRANSACTION
 	END
 END
-
-SELECT *
-FROM HOADON
-INSERT INTO HOADON
-VALUES ('1027', 2005-07-20, NULL, 'NV05', 60000)
+	
 --13. Trị giá của một hóa đơn là tổng thành tiền (số lượng*đơn giá) của các chi tiết thuộc hóa đơn đó.
 CREATE TRIGGER trg_UpdateTriGia
 ON CTHD
